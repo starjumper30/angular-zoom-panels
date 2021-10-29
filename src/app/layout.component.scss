@@ -1,0 +1,66 @@
+:host {
+    height: 800px;
+    display: block;
+    position:relative;
+    background-color: black;
+}
+
+
+    .panel {
+        color:white;
+        background-color: #1d1d1d;
+        padding: 5px;
+
+        &.zoom {
+        z-index: 2000;
+        border: 1px dashed #727272FF;
+
+        & > * {
+          position: absolute;
+          top: 75px;
+          left: 50px;
+          width: 1714px;
+          height: 895px;
+          display: block;
+          background-color: #1d1d1d;
+          border: 1px solid #727272FF;
+          border-radius: 5px;
+          box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
+
+    .split {
+        display: flex;
+
+    }
+
+    .split > :nth-child(2) {
+        flex-grow: 1;
+    }
+
+    .split.vertical {
+        flex-direction: column;
+        row-gap: 10px;
+        height: 100%;
+    }
+
+    .split.horizontal {
+        flex-direction: row;
+        height: fit-content;
+        column-gap: 10px;
+    }
+
+
+    .panel.top.left {
+      width: 466px;
+      height: 416px;
+      padding: 0;
+    }
+
+    .panel.bottom.left {
+      width: 732px;
+      height: 583px;
+    }
+
+
